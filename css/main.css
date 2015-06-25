@@ -63,12 +63,10 @@ figcaption {
   display: none; }
 
 .articles__list {
-  display: none; }
+  display: none;
+  counter-reset: articles; }
   .articles__list--current {
     display: block; }
-
-.articles__item__title {
-  font-size: 22px; }
 
 .articles__item + .articles__item {
   margin-top: 26px; }
@@ -78,43 +76,41 @@ figcaption {
   margin-top: 6.5px; }
 .articles__item:first-child .articles__item__link {
   font-size: 36px;
-  line-height: 39px; }
+  line-height: 39px;
+  color: white; }
+.articles__item:first-child .articles__item__title {
+  padding: 0 10px; }
+.articles__item:first-child .articles__item__trailText {
+  padding: 0 10px 13px;
+  color: white; }
+
+.articles__item__title {
+  font-size: 22px;
+  margin-left: 1em;
+  text-indent: -0.8em; }
+  .articles__item__title:before {
+    counter-increment: articles;
+    content: counter(articles);
+    margin-right: 0.4em;
+    font-size: 18px; }
+
+.articles__item__trailText {
+  margin-left: 1em; }
 
 .articles__list--sport .articles__item__link {
   color: #008000; }
 .articles__list--sport .articles__item:first-child {
   background: #008000; }
-  .articles__list--sport .articles__item:first-child a {
-    color: white; }
-  .articles__list--sport .articles__item:first-child .articles__item__title {
-    padding: 0 10px; }
-  .articles__list--sport .articles__item:first-child .articles__item__trailText {
-    padding: 0 10px 13px;
-    color: white; }
 
 .articles__list--news .articles__item__link {
   color: #D61D00; }
 .articles__list--news .articles__item:first-child {
   background: #D61D00; }
-  .articles__list--news .articles__item:first-child a {
-    color: white; }
-  .articles__list--news .articles__item:first-child .articles__item__title {
-    padding: 0 10px; }
-  .articles__list--news .articles__item:first-child .articles__item__trailText {
-    padding: 0 10px 13px;
-    color: white; }
 
 .articles__list--travel .articles__item__link {
   color: #066EC9; }
 .articles__list--travel .articles__item:first-child {
   background: #066EC9; }
-  .articles__list--travel .articles__item:first-child a {
-    color: white; }
-  .articles__list--travel .articles__item:first-child .articles__item__title {
-    padding: 0 10px; }
-  .articles__list--travel .articles__item:first-child .articles__item__trailText {
-    padding: 0 10px 13px;
-    color: white; }
 
 .latest-articles-component {
   max-width: 460px;

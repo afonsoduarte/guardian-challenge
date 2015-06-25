@@ -6,21 +6,20 @@ figcaption {
 // Only show first articles list
 .articles__list {
   display: none;
+  counter-reset: articles;
 
   &--current {
     display: block;
   }
 }
 
-.articles__item__title {
-  font-size: map-get($type-sizes, big);
-}
-
 .articles__item {
+  // Margin between items
   & + & {
     margin-top: $baseline;
   }
 
+  // Hide image from all but first
   &:not(:first-child) {
     figure {
       display: none;
@@ -36,8 +35,34 @@ figcaption {
     .articles__item__link {
       font-size: map-get($type-sizes, huge);
       line-height: $baseline*1.5;
+      color: white;
+    }
+
+    .articles__item__title {
+      padding: 0 10px;
+    }
+
+    .articles__item__trailText {
+      padding: 0 10px $baseline/2;
+      color: white;
     }
   }
+}
+
+.articles__item__title {
+  font-size: map-get($type-sizes, big);
+  margin-left: 1em;
+  text-indent: -0.8em;
+  &:before {
+    counter-increment: articles;
+    content: counter(articles);
+    margin-right: 0.4em;
+    font-size: map-get($type-sizes, text);
+  }
+}
+
+.articles__item__trailText {
+  margin-left: 1em;
 }
 
 // Apply colors
@@ -49,19 +74,6 @@ figcaption {
     
     .articles__item:first-child {
       background: map-get($colors, $section);
-
-      a {
-        color: white;
-      }
-
-      .articles__item__title {
-        padding: 0 10px;
-      }
-
-      .articles__item__trailText {
-        padding: 0 10px $baseline/2;
-        color: white;
-      }
     }
   }
 }
