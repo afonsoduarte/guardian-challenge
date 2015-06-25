@@ -1,0 +1,12 @@
+// Mixins
+@mixin pretty-underline($color) {
+  $color: rgba($color, 0.9);
+  background-image: 
+    linear-gradient(
+      to top, 
+      transparent, 
+      transparent 0.1em, 
+      #{$color} 0.1em, 
+      #{$color} 0.25em, 
+      transparent 0.25em);
+}

@@ -1,0 +1,32 @@
+// Tabbed Nav
+.tabbed-nav__list {
+  // Flexbox FTW
+  display: flex;
+}
+
+.tabbed-nav__item {
+  flex-grow: 1;
+  padding: $baseline/4 0;
+  border-top: 2px solid;
+  text-align: center;
+}
+
+.tabbed-nav__item--current {
+  background: rgba(100,100,100, 0.1);
+  .tabbed-nav__link {
+    color: white;
+  }
+}
+
+// Apply colors to sections
+@each $section in $sections {
+  .tabbed-nav__item--#{$section} {
+    border-top-color: map-get($colors, $section);
+  }
+  .tabbed-nav__link--#{$section} {
+    color: map-get($colors, $section);
+  }
+  .tabbed-nav__item--#{$section}.tabbed-nav__item--current {
+    background: rgba(map-get($colors, $section), 0.8);
+  }
+}

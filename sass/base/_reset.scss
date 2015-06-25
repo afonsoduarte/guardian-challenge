@@ -1,0 +1,17 @@
+// Reset
+ul, ol, li, p, h1, h2, h3, h4, figure, figcaption {
+  margin: 0;
+  padding: 0;
+  line-height: $baseline;
+  font-size: map-get($type-sizes, text);
+  font-weight: normal;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}

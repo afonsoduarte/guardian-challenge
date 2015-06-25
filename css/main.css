@@ -1,0 +1,126 @@
+ul, ol, li, p, h1, h2, h3, h4, figure, figcaption {
+  margin: 0;
+  padding: 0;
+  line-height: 26px;
+  font-size: 18px;
+  font-weight: normal; }
+
+ul, ol {
+  list-style: none; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+.tabbed-nav__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.tabbed-nav__item {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 6.5px 0;
+  border-top: 2px solid;
+  text-align: center; }
+
+.tabbed-nav__item--current {
+  background: rgba(100, 100, 100, 0.1); }
+  .tabbed-nav__item--current .tabbed-nav__link {
+    color: white; }
+
+.tabbed-nav__item--sport {
+  border-top-color: #008000; }
+
+.tabbed-nav__link--sport {
+  color: #008000; }
+
+.tabbed-nav__item--sport.tabbed-nav__item--current {
+  background: rgba(0, 128, 0, 0.8); }
+
+.tabbed-nav__item--news {
+  border-top-color: #D61D00; }
+
+.tabbed-nav__link--news {
+  color: #D61D00; }
+
+.tabbed-nav__item--news.tabbed-nav__item--current {
+  background: rgba(214, 29, 0, 0.8); }
+
+.tabbed-nav__item--travel {
+  border-top-color: #066EC9; }
+
+.tabbed-nav__link--travel {
+  color: #066EC9; }
+
+.tabbed-nav__item--travel.tabbed-nav__item--current {
+  background: rgba(6, 110, 201, 0.8); }
+
+figcaption {
+  display: none; }
+
+.articles__list {
+  display: none; }
+  .articles__list--current {
+    display: block; }
+
+.articles__item__title {
+  font-size: 22px; }
+
+.articles__item + .articles__item {
+  margin-top: 26px; }
+.articles__item:not(:first-child) figure {
+  display: none; }
+.articles__item:first-child .articles__item__title {
+  margin-top: 6.5px; }
+.articles__item:first-child .articles__item__link {
+  font-size: 36px;
+  line-height: 39px; }
+
+.articles__list--sport .articles__item__link {
+  color: #008000; }
+.articles__list--sport .articles__item:first-child {
+  background: #008000; }
+  .articles__list--sport .articles__item:first-child a {
+    color: white; }
+  .articles__list--sport .articles__item:first-child .articles__item__title {
+    padding: 0 10px; }
+  .articles__list--sport .articles__item:first-child .articles__item__trailText {
+    padding: 0 10px 13px;
+    color: white; }
+
+.articles__list--news .articles__item__link {
+  color: #D61D00; }
+.articles__list--news .articles__item:first-child {
+  background: #D61D00; }
+  .articles__list--news .articles__item:first-child a {
+    color: white; }
+  .articles__list--news .articles__item:first-child .articles__item__title {
+    padding: 0 10px; }
+  .articles__list--news .articles__item:first-child .articles__item__trailText {
+    padding: 0 10px 13px;
+    color: white; }
+
+.articles__list--travel .articles__item__link {
+  color: #066EC9; }
+.articles__list--travel .articles__item:first-child {
+  background: #066EC9; }
+  .articles__list--travel .articles__item:first-child a {
+    color: white; }
+  .articles__list--travel .articles__item:first-child .articles__item__title {
+    padding: 0 10px; }
+  .articles__list--travel .articles__item:first-child .articles__item__trailText {
+    padding: 0 10px 13px;
+    color: white; }
+
+.latest-articles-component {
+  max-width: 460px;
+  font-family: "Times", serif; }
+  .latest-articles-component p {
+    word-spacing: -0.04em; }
+  .latest-articles-component img {
+    max-width: 100%;
+    height: auto; }

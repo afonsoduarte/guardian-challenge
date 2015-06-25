@@ -1,0 +1,36 @@
+@import "base/settings";
+@import "base/mixins";
+@import "base/reset";
+
+@import "blocks/tabbed-nav";
+@import "blocks/articles";
+
+
+// Latest Articles Component
+.latest-articles-component {
+  // Limit width to smaller images
+  max-width: 460px; 
+  // Can't load the Guardian fonts, so Times it is.
+  // There's nothing wrong with good ol' Times
+  // it's just a bit misused.
+  font-family: "Times", serif;
+
+  p {
+    // Default word spacing is a bit big
+    word-spacing: -0.04em;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+
+
+
+
+
+
+

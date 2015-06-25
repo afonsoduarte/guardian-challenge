@@ -1,0 +1,67 @@
+// Articles 
+figcaption {
+  display: none;
+}
+
+// Only show first articles list
+.articles__list {
+  display: none;
+
+  &--current {
+    display: block;
+  }
+}
+
+.articles__item__title {
+  font-size: map-get($type-sizes, big);
+}
+
+.articles__item {
+  & + & {
+    margin-top: $baseline;
+  }
+
+  &:not(:first-child) {
+    figure {
+      display: none;
+    }
+  }
+
+  // Highlight first article
+  &:first-child {
+    .articles__item__title {
+      margin-top: $baseline/4;
+    }
+
+    .articles__item__link {
+      font-size: map-get($type-sizes, huge);
+      line-height: $baseline*1.5;
+    }
+  }
+}
+
+// Apply colors
+@each $section in $sections {
+  .articles__list--#{$section} {
+    .articles__item__link {
+      color: map-get($colors, $section);
+    }
+    
+    .articles__item:first-child {
+      background: map-get($colors, $section);
+
+      a {
+        color: white;
+      }
+
+      .articles__item__title {
+        padding: 0 10px;
+      }
+
+      .articles__item__trailText {
+        padding: 0 10px $baseline/2;
+        color: white;
+      }
+    }
+  }
+}
